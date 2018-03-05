@@ -1,8 +1,8 @@
 {% set name = "aiobotocore" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "5400ef95d4f73b06cd2bb648a33f714cea682bcfea639b2af221a4bd1b8af962" %}
+{% set hash_value = "44ab88ab517b4bfaa7d301f97dc54eb6cd2730a0ad8f32177050ad7fef55c01a" %}
 
 package:
   name: {{ name|lower }}
@@ -24,8 +24,8 @@ requirements:
     - setuptools
   run:
     - python
-    - botocore >=1.7.28,<=1.7.40
-    - aiohttp >=2.3.0,<3.0.0
+    - botocore >=1.8.0,<=1.8.21
+    - aiohttp >=3.0.0
     - multidict >=2.1.4
     - wrapt >=1.10.10
     - packaging >=16.8
