@@ -24,8 +24,8 @@ requirements:
     - setuptools
   run:
     - python
-    - botocore >=1.7.4,<=1.7.5
-    - aiohttp >=2.0.4,<=2.3.0
+    - botocore >=1.8.0,<=1.8.21
+    - aiohttp >=3.0.0
     - multidict >=2.1.4
     - wrapt >=1.10.10
     - packaging >=16.8
