@@ -15,15 +15,15 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record=record.txt
-  skip: True  # [py<34]
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - setuptools
   run:
-    - python
+    - python >=3.5
     - botocore >=1.10.12,<1.10.13
     - aiohttp >=3.3.1
     - wrapt >=1.10.10
