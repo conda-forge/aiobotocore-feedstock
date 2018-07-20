@@ -1,8 +1,8 @@
 {% set name = "aiobotocore" %}
-{% set version = "0.9.2" %}
+{% set version = "0.9.3" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "dcc3b9e917572e976cbcb777c587dc3dbb88f9cec2d7c1679b3349c35170ed31" %}
+{% set hash_value = "d4937d51caf94ad124ff68303a859c25a777a4a124f5e687b8187476e056b101" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
 
   run:
     - python >=3.5
-    - botocore >=1.10.12,<1.10.13
+    - botocore >=1.10.58,<1.10.59
     - aiohttp >=3.3.1
     - wrapt >=1.10.10
 
