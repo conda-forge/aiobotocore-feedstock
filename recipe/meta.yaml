@@ -1,8 +1,8 @@
 {% set name = "aiobotocore" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "f31cf336dc86fec084085ca3b55d36b6ee130bea1a8fa261ccd59cd842aafc3d" %}
+{% set hash_value = "1742a0e764c0057b2f80922d5d4db1bbbd4ddfc4b1b1992441a8e0a570f25cea" %}
 
 package:
   name: {{ name|lower }}
