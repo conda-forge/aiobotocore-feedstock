@@ -1,8 +1,8 @@
 {% set name = "aiobotocore" %}
-{% set version = "0.10.3" %}
+{% set version = "0.10.4" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "70ace7a7894e17dc19b21a23b39f735557b13eadb85bbcf8d2b3440b8ddf0add" %}
+{% set hash_value = "e7eb3eea7c54f7b5a422c650f97ced96336a278fbe77e8de5980b7c31f8ed53f" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
