@@ -1,8 +1,8 @@
 {% set name = "aiobotocore" %}
-{% set version = "0.11.1" %}
+{% set version = "0.12.0" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "972939901238f85c4389f2ba55cd6ffdf22e970e72c30ee733b53d34166a6fd1" %}
+{% set hash_value = "f9a92b6fc20f40d42c0402bd597b09853d76ed40d9c3df7a3d32dbafb7cdc631" %}
 
 package:
   name: {{ name|lower }}
@@ -20,14 +20,14 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
 
   run:
-    - python >=3.5
-    - botocore >=1.13.14,<1.13.15
     - aiohttp >=3.3.1
-    - async_generator >=1.10
+    - aioitertools >=0.5.1
+    - botocore >=1.15.3,<1.15.16
+    - python >=3.6
     - wrapt >=1.10.10
 
 test:
