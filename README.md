@@ -3,9 +3,9 @@ About aiobotocore
 
 Home: https://github.com/aio-libs/aiobotocore
 
-Package license: Apache 2
+Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Async client for aws services using botocore and aiohttp
 
