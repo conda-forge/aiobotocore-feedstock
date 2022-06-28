@@ -1,5 +1,5 @@
 {% set name = "aiobotocore" %}
-{% set version = "2.3.3" %}
+{% set version = "2.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 13d403a067e1afc997f756a3107d125ffe964e7213f117f327c62fe763c67e2e
+  sha256: 6554ebea5764f66f4be544a4fcaa0953ee80e600dd7bd818ba4893d72bf12bfb
 
 build:
   number: 0
