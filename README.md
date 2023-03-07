@@ -1,11 +1,11 @@
-About aiobotocore
-=================
+About aiobotocore-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiobotocore-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/aio-libs/aiobotocore
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiobotocore-feedstock/blob/main/LICENSE.txt)
 
 Summary: Async client for aws services using botocore and aiohttp
 
