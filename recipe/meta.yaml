@@ -10,19 +10,19 @@ source:
   sha256: 506591374cc0aee1bdf0ebe290560424a24af176dfe2ea7057fe1df97c4f0467
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
-    - aiohttp >=3.3.1,<4.0.0
+    - python >=3.8
+    - aiohttp >=3.7.4.post0,<4.0.0
     - aioitertools >=0.5.1,<1.0.0
-    - botocore >=1.31.17,<1.31.18
+    - botocore >=1.31.16,<1.31.65
     - wrapt >=1.10.10,<2.0.0
 
 test:
