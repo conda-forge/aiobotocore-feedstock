@@ -1,5 +1,5 @@
 {% set name = "aiobotocore" %}
-{% set version = "2.11.2" %}
+{% set version = "2.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6dd7352248e3523019c5a54a395d2b1c31080697fc80a9ad2672de4eec8c7abd
+  sha256: bc841cef234afcb781f2d600680c9e49d01b9a2e8169790a32579bb0df51777f
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - python >=3.8
     - aiohttp >=3.7.4.post0,<4.0.0
     - aioitertools >=0.5.1,<1.0.0
-    - botocore >=1.33.2,<1.34.35
+    - botocore >=1.34.41,<1.34.52
     - wrapt >=1.10.10,<2.0.0
 
 test:
