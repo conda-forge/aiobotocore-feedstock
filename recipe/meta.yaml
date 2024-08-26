@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools >=72.2.0
   run:
     - python >=3.8
     - aiohttp >=3.9.2,<4.0.0
