@@ -23,7 +23,7 @@ requirements:
     - python >=3.8
     - aiohttp >=3.9.2,<4.0.0
     - aioitertools >=0.5.1,<1.0.0
-    - botocore >=1.34.70,<1.34.163
+    - botocore >=1.35.0,<1.35.8
     - wrapt >=1.10.10,<2.0.0
 
 test:
