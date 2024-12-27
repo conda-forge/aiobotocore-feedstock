@@ -1,13 +1,13 @@
 {% set name = "aiobotocore" %}
-{% set version = "2.15.2" %}
+{% set version = "2.16.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9ac1cfcaccccc80602968174aa032bf978abe36bd4e55e6781d6500909af1375
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 0f94904c6a1d14d5aac0502fcc1d721b95ee60d46d8a0e546f6203de0410d522
 
 build:
   number: 0
@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=72.2.0
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - aiohttp >=3.9.2,<4.0.0
     - aioitertools >=0.5.1,<1.0.0
-    - botocore >=1.35.16,<1.35.37
+    - botocore >=1.35.74,<1.35.89
     - wrapt >=1.10.10,<2.0.0
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/aio-libs/aiobotocore
