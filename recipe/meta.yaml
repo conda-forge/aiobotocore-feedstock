@@ -1,5 +1,5 @@
 {% set name = "aiobotocore" %}
-{% set version = "2.16.1" %}
+{% set version = "2.18.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0f94904c6a1d14d5aac0502fcc1d721b95ee60d46d8a0e546f6203de0410d522
+  sha256: c54db752c5a742bf1a05c8359a93f508b4bf702b0e6be253a4c9ef1f9c9b6706
 
 build:
   number: 0
@@ -23,7 +23,11 @@ requirements:
     - python >={{ python_min }}
     - aiohttp >=3.9.2,<4.0.0
     - aioitertools >=0.5.1,<1.0.0
-    - botocore >=1.35.74,<1.35.89
+    - botocore >=1.36.0,<1.36.2
+    - python-dateutil >=2.1,<3.0.0
+    - jmespath >=0.7.1,<2.0.0
+    - multidict >=6.0.0,<7.0.0
+    - urllib3 >=1.25.4,<1.27
     - wrapt >=1.10.10,<2.0.0
 
 test:
