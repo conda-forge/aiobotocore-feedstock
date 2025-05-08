@@ -27,9 +27,6 @@ requirements:
     - python-dateutil >=2.1,<3.0.0
     - jmespath >=0.7.1,<2.0.0
     - multidict >=6.0.0,<7.0.0
-    # c/f noarch means no selectors, so the least restrictive
-    # urllib3 dep is specified here
-    - urllib3 >=1.25.4,!=2.2.0,<3
     - wrapt >=1.10.10,<2.0.0
 
 test:
