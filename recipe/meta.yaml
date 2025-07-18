@@ -12,13 +12,13 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=72.2.0
+    - setuptools >=68.2.0
   run:
     - python >={{ python_min }}
     - aiohttp >=3.9.2,<4.0.0
