@@ -1,26 +1,29 @@
-{% set name = "aiobotocore" %}
-{% set version = "2.23.2" %}
+schema_version: 1
+
+context:
+  name: aiobotocore
+  version: 2.23.2
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: 9c2cbd6e813bb6c60b7f20fc11897976a583c57b0093a87bebfe80a9b08746b2
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools >=68.2.0
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - aiohttp >=3.9.2,<4.0.0
     - aioitertools >=0.5.1,<1.0.0
     - botocore >=1.39.7,<1.39.9
@@ -29,19 +32,20 @@ requirements:
     - multidict >=6.0.0,<7.0.0
     - wrapt >=1.10.10,<2.0.0
 
-test:
-  imports:
-    - aiobotocore
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - aiobotocore
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
 
 about:
-  home: https://github.com/aio-libs/aiobotocore
   license: Apache-2.0
-  license_family: Apache
   license_file: LICENSE
   summary: Async client for aws services using botocore and aiohttp
   description: |
@@ -49,8 +53,9 @@ about:
     should work (may be with minor fixes). For now it has been tested only for
     upload/download api for s3. It has been reported that SQS and Dynamo
     services also work.
-  doc_url: http://aiobotocore.readthedocs.io
-  dev_url: https://github.com/aio-libs/aiobotocore
+  homepage: https://github.com/aio-libs/aiobotocore
+  repository: https://github.com/aio-libs/aiobotocore
+  documentation: http://aiobotocore.readthedocs.io
 
 extra:
   recipe-maintainers:
