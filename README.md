@@ -11,13 +11,12 @@ Summary: Async client for aws services using botocore and aiohttp
 
 Development: https://github.com/aio-libs/aiobotocore
 
-Documentation: http://aiobotocore.readthedocs.io
+Documentation: http://aiobotocore.readthedocs.io/
 
 Main purpose of this library to support amazon s3 api, but other services
 should work (may be with minor fixes). For now it has been tested only for
 upload/download api for s3. It has been reported that SQS and Dynamo
 services also work.
-
 
 Current build status
 ====================
