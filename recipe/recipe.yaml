@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: aiobotocore
-  version: 3.9.1
+  version: 3.9.2
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 617d4a78da5adb6ae7d532835727ad388f73555f2ef129b9de1b1add73a43ee6
+  sha256: 8e32238c5bd77717ab1ac90077ff51ab141d025528115ccc7cc9b50b2d176e5f
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - python >=${{ python_min }}
     - aiohttp >=3.14.0,<4.0.0
     - aioitertools >=0.5.1,<1.0.0
-    - botocore >=1.43.66,<1.43.76
+    - botocore >=1.43.101,<1.43.107
     - python-dateutil >=2.1,<3.0.0
     - jmespath >=0.7.1,<2.0.0
     - multidict >=6.0.0,<7.0.0
